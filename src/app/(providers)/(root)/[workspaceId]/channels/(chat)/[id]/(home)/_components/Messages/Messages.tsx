@@ -7,6 +7,9 @@ import { useGetChatMessages, useGetUsersInChannel } from '../../../../_hook/useC
 import useGetParamsChannelId from '../../../../_hook/useGetParamsChannelId';
 import useChatSubscription from '../../_hooks/useChatSubscription';
 
+/**
+ * 컴포넌트의 종속성 관련 개선 필요 예시 03
+ */
 const Messages = () => {
   const channelId = useGetParamsChannelId();
   const containerRef = useRef<HTMLDivElement>(null);

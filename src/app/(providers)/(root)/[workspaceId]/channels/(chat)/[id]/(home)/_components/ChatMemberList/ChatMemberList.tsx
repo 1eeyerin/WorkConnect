@@ -13,6 +13,9 @@ import Link from 'next/link';
 import useWorkspaceId from '@/hooks/useWorkspaceId';
 import { useWorkspaceUserId } from '@/hooks/useWorkspaceUserId';
 
+/**
+ * 컴포넌트의 종속성 관련 개선 필요 예시 01
+ */
 const ChatMemberList = () => {
   const { id } = useParams();
   const workspaceId = useWorkspaceId();
