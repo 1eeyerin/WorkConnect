@@ -61,6 +61,17 @@ export const BackButton = ({ className }: { className?: string }) => {
   );
 };
 
+/**
+ * 만약 저라면 이런부분은 이렇게도 해봤을 것 같습니다.
+ * ```tsx
+ * interface TopBarContentProps  {
+ *   children: ReactNode;
+ *   hideBackButton?: boolean;
+ *   left?: ReactNode | ReactNode[];
+ *   right?: ReactNode | ReactNode[];
+ * }
+ * ```
+ */
 const TopBarContent = ({ children, Icon1, Icon2, Icon3, Icon4 }: TopBarContentProps) => {
   return (
     <>
