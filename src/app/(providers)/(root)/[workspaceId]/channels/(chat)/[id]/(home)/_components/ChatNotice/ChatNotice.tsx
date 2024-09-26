@@ -11,6 +11,9 @@ import { useGetLatestNotice } from '../../../../_hook/useChatQuery';
 import { handleSubscribeToNotice } from '../../_utils/subscribe';
 import useGetParamsChannelId from '../../../../_hook/useGetParamsChannelId';
 
+/**
+ * 컴포넌트의 종속성 관련 개선 필요 예시 02
+ */
 const ChatNotice = () => {
   const channelId = useGetParamsChannelId();
   const workspaceId = useWorkspaceId();
@@ -18,6 +21,9 @@ const ChatNotice = () => {
   const { data: latestNotice } = useGetLatestNotice({ id: channelId });
   const { handleNoticeUpdates: handleUpdates } = useChatHandlers();
 
+  /**
+   * handleSubscribeToNotice와 useGetParamsChannelId를 묶어서 page단계에서의 hook으로 제공해주는 것이 더 좋을 것 같아요.
+   */
   useEffect(() => {
     if (!channelId) return;
 
